@@ -1,0 +1,28 @@
+[package]
+name = "dns-server"
+version = "0.1.0"
+edition = "2021"
+
+[[example]]
+name = "helloworld"
+path = "example/helloworld.rs"
+
+[dependencies]
+anyhow = { version = "1.0.90", features = ["backtrace"] }
+async-trait = "0.1.83"
+derive_builder = "0.20.2"
+hickory-proto = { version = "0.24.1", features = ["serde-config"] }
+hickory-server = { version = "0.24.1", features = ["rustls"] }
+humantime = "2.1.0"
+humantime-serde = "1.1.1"
+lazy_static = "1.5.0"
+maplit = "1.0.2"
+serde = { version = "1.0.210", features = ["derive"] }
+tokio = { version = "1.40.0", features = ["full"] }
+tokio-util = "0.7.12"
+toml = { version = "0.8.19", features = ["preserve_order"] }
+tracing = "0.1.40"
+tracing-subscriber = { version = "0.3.18", features = ["chrono"] }
+
+[dev-dependencies]
+hickory-client = { version = "0.24.1", features = ["backtrace", "rustls", "serde-config"] }
