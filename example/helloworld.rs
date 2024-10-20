@@ -1,6 +1,6 @@
 use anyhow::Result;
-use dns_server::config::{GeneralConfigBuilder, RecordBuilder, RecordType, RunConfigBuilder};
-use dns_server::Server;
+use libdns::config::{GeneralConfigBuilder, RecordBuilder, RecordType, RunConfigBuilder};
+use libdns::Server;
 use maplit::hashmap;
 use std::time::Duration;
 use tokio::signal;
